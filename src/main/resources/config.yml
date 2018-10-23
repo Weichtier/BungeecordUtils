@@ -1,0 +1,13 @@
+Config:
+  Mysql:
+    Host: ''
+    User: ''
+    Password: ''
+    Database: ''
+
+
+  Report:
+    Reasons:
+    - ''
+    - ''
+    - ''
