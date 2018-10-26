@@ -1,5 +1,7 @@
 package de.pixeltitan.bungeeutils;
 
+import de.pixeltitan.bungeeutils.commands.BroadcastCommand;
+import de.pixeltitan.bungeeutils.commands.JoinmeCommand;
 import de.pixeltitan.bungeeutils.commands.ReportCommand;
 
 import de.pixeltitan.bungeeutils.commands.TeamchatCommand;
@@ -29,7 +31,7 @@ public class Main extends Plugin {
 
     @Override
     public void onDisable() {
-
+        getLogger().info("Disabling Plugin!");
     }
 
     public static Main getInstance() {
@@ -49,6 +51,9 @@ public class Main extends Plugin {
        pm.registerCommand(instance, new ReportCommand("report"));
        pm.registerCommand(instance, new TeamchatCommand("teamchat"));
        pm.registerCommand(instance, new TeamchatCommand("tc"));
+       pm.registerCommand(instance, new JoinmeCommand("joinme"));
+       pm.registerCommand(instance, new BroadcastCommand("broadcast"));
+       pm.registerCommand(instance, new BroadcastCommand("bc"));
        pm.registerListener(instance, new JoinListener());
 
         ReportUtils.addReason("Hacking");
